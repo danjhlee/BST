@@ -193,7 +193,7 @@ int isBST(tree *node)
 }
 
 /*
- * Find the successor node of a give node in a BST
+ * Find the successor element of a given node in a BST
  */
 tree *find_successor(tree *node)
 {
@@ -211,7 +211,7 @@ tree *find_successor(tree *node)
 }
 
 /*
- * Find the predecessor node of a give node in a BST
+ * Find the predecessor element of a given node in a BST
  */
 tree *find_predecessor(tree *node)
 {
@@ -229,7 +229,7 @@ tree *find_predecessor(tree *node)
 }
 
 /*
- * Find the kth smallest node in a BST
+ * Find the kth smallest element in a BST
  */
 tree *find_kth_smallest(tree *node, int k)
 {
@@ -247,7 +247,7 @@ tree *find_kth_smallest(tree *node, int k)
 }
 
 /*
- * Find the kth largest node in a BST
+ * Find the kth largest element in a BST
  */
 tree *find_kth_largest(tree *node, int k)
 {
