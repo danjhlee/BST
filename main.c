@@ -28,7 +28,6 @@ tree *find_kth_largest(tree *node, int k);
 tree *find_LCA(tree *node, int n1, int n2);
 
 
-
 /*
  *	Insert a node to a BST
  */
