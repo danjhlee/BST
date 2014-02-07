@@ -81,14 +81,11 @@ void delete_tree(int value, tree *node)
 	/* only one child */
 	else if (delete->left == NULL || delete->right == NULL) {
 		if (delete->left) {
-			delete->value = (delete->left)->value;
-			free(delete->left);
-			delete->left = NULL;
+			(delete->parent)->left = delete->left;
 		} else {
-			delete->value = (delete->right)->value;
-			free(delete->right);
-			delete->right = NULL;
+			(delete->parent)->right = delete->right;
 		}
+		free(delete);
 	}
 	/* two children: immediate successor is the smallest value in the right subtree */
 	else if (delete->left && delete->right) {
