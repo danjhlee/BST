@@ -36,22 +36,31 @@ void insert_tree(int value, tree *node)
 	if (node == NULL)
 		return;
 
-	if (value < node->value) {
-		if (node->left) {
+	if (value < node->value) 
+	{
+		if (node->left) 
+		{
 			insert_tree(value, node->left);
-		} else {
-			node->left = calloc(1, sizeof(tree));
+		} 
+		else 
+		{
+			node->left = (tree *)calloc(1, sizeof(tree));
 			(node->left)->value = value;
 			(node->left)->left = NULL;
 			(node->left)->right = NULL;
 			(node->left)->parent = node;
 		}
 
-	} else {
-		if (node->right) {
+	} 
+	else 
+	{
+		if (node->right) 
+		{
 			insert_tree(value, node->right);
-		} else {
-			node->right = calloc(1,sizeof(tree));
+		} 
+		else 
+		{
+			node->right = (tree *)calloc(1,sizeof(tree));
 			(node->right)->value = value;
 			(node->right)->left = NULL;
 			(node->right)->right = NULL;
